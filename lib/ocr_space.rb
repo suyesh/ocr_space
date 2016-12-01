@@ -1,4 +1,7 @@
 require "ocr_space/version"
+require 'httparty'
+require 'httmultiparty'
+require 'fileutils'
 
 module OcrSpace
   class FromUrl
