@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'ocr_space/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ocr_space"
+  spec.name          = "ocr_space_ruby"
   spec.version       = OcrSpace::VERSION
   spec.authors       = ["Suyesh Bhandari"]
   spec.email         = ["suyeshb@gmail.com"]
