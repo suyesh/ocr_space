@@ -38,4 +38,8 @@ puts result.data
 
 #NOTE
 
-I will continue working on this to make it awesomer
+I will continue working on this to make it awesomer.
+
+#TODO
+
+Make command line utility
