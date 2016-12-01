@@ -1,8 +1,8 @@
+![OCR.SPACE](https://ocr.space/Content/Images/ocr.space.logo.png)
+
 # OcrSpace
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ocr_space`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for converting images to text.
 
 ## Installation
 
@@ -22,20 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#To convert images from url
 
-## Development
+```ruby
+result = OcrSpace::FromUrl.new(apikey: "YOUR API KEY", url: "Image url")
+puts result.data
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+#To convert images from file upload
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```ruby
+result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "Path to file")
+puts result.data
+```
 
-## Contributing
+#NOTE
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ocr_space. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+I will continue working on this to make it awesomer
