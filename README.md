@@ -9,7 +9,7 @@ Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for co
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ocr_space_ruby'
+gem 'ocr_space'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ocr_space_ruby
+    $ gem install ocr_space
 
 ## Usage
 
