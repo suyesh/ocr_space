@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Suyesh Bhandari"]
   spec.email         = ["suyeshb@gmail.com"]
 
-  spec.summary       = "Free Online OCR - Convert images to text "
-  spec.description   = "Free Online OCR - Convert images to text "
+  spec.summary       = "Free Online OCR for Ruby - Convert images to text "
+  spec.description   = "Free Online OCR for Ruby - Convert images to text "
   spec.homepage      = "https://github.com/suyesh/ocr_space"
   spec.license       = "MIT"
 
@@ -32,7 +32,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "faraday"
   spec.add_dependency "json"
   spec.add_dependency "httparty"
   spec.add_dependency "httmultiparty"

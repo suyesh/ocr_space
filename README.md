@@ -2,7 +2,7 @@
 [![Gem Version](https://badge.fury.io/rb/ocr_space.svg)](https://badge.fury.io/rb/ocr_space)
 # OcrSpace
 
-Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for converting images to text.
+Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for converting images to text. Register [here](http://space.us11.list-manage1.com/subscribe?u=ce17e59f5b68a2fd3542801fd&id=252aee70a1) for free api key.
 
 ## Installation
 
