@@ -29,6 +29,8 @@ Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 #To convert images from url
 
 ```ruby
+require 'ocr_space'
+
 result = OcrSpace::FromUrl.new(apikey: "YOUR API KEY", url: "http://i.stack.imgur.com/vrkIj.png")
 
 puts result #Raw result
@@ -43,6 +45,8 @@ puts result.text_data #Clean result
 #To convert images from file upload
 
 ```ruby
+require 'ocr_space'
+
 result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "./vrkIj.png")
 
 puts result #Raw result
@@ -65,6 +69,18 @@ $ "I am curious about \r\narea-filling text \r\nrendering options \r\n"
 ```
 #NOTE
 For commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey.
+
+```
+$ export ocr_api_key='YOUR API KEY'
+```
+Also if you set env variable then you don't need to include apikey in your ruby scripts. You can just do the following -
+
+```ruby
+result = OcrSpace::FromFile.new(files: "./vrkIj.png") #for File based
+
+result = OcrSpace::FromUrl.new(url: "http://i.stack.imgur.com/vrkIj.png") #for URL based
+
+```
 
 #Optional
 
