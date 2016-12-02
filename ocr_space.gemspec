@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Free Online OCR for Ruby - Convert images to text "
   spec.description   = "Free Online OCR for Ruby - Convert images to text "
-  spec.homepage      = "https://github.com/suyesh/ocr_space"
+  spec.homepage      = "https://suyesh.github.io/ocr_space/"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
