@@ -35,7 +35,20 @@ puts result.data
 result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "Path to file")
 puts result.data
 ```
+#Optional
 
+You can also pass in Optional attributes
+
+```ruby
+
+isOverlayRequired:
+[#Optional] Default = False Allows you to specify if the image/pdf text overlay is required. Overlay could be #used to show the text over the image
+
+language:
+
+#Czech = ce; Danish = dan; Dutch = dut; English = eng; Finnish = fin; French = fre; German = ger;Hungarian=hun;
+#Italian = ita; Norwegian = nor; Polish = pol; Portuguese = por; Spanish = spa; Swedish = swe; #ChineseSimplified = chs; Greek = gre; Japanese = jpn; Russian = rus; Turkish = tur; ChineseTraditional = cht; #Korean = kor
+```
 #NOTE
 
 I will continue working on this to make it awesomer.

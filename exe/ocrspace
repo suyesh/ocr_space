@@ -1,0 +1,9 @@
+# !/usr/bin/env ruby
+
+require_relative "../lib/ocr_space/from_file"
+
+local_file = File.new(ARGV[0])
+
+result = OcrSpace::FromFile.new(files: local_file)
+
+puts result.data
