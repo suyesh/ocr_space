@@ -2,7 +2,14 @@
 
 require_relative "../lib/ocr_space/from_file"
 
+if ARGV.empty?
+  puts "You need to mention the image path"
+else
+  begin
+    result = OcrSpace::FromFile.new(files: ARGV[0])
+  rescue
+     puts "Something went wrong, Please try again."
+  end
+end
 
-result = OcrSpace::FromFile.new(files: ARGV[0])
-
-puts result.data
+puts result.data.parsed_response["ParsedResults"][0]["ParsedText"]
