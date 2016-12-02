@@ -1,8 +1,10 @@
 ![OCR.SPACE](https://ocr.space/Content/Images/ocr.space.logo.png)
 [![Gem Version](https://badge.fury.io/rb/ocr_space.svg)](https://badge.fury.io/rb/ocr_space)
+
 # OcrSpace
 
 Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for converting images to text. Register [here](http://space.us11.list-manage1.com/subscribe?u=ce17e59f5b68a2fd3542801fd&id=252aee70a1) for free api key.
+
 
 ## Installation
 
@@ -19,6 +21,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ocr_space
+
+Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 
 ## Usage
 
