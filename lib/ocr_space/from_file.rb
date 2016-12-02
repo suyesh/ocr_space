@@ -1,4 +1,4 @@
-require 'file_post'
+require 'ocr_space/file_post'
 require 'fileutils'
 
 module OcrSpace
