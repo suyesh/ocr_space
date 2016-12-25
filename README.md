@@ -67,7 +67,10 @@ You can run ocr_space through shell to get quick result from a image using filep
 ```
 $ ocrspace home/suyesh/nicola_tesla.jpg
 
-$ "If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n"
+=> If you want to find the secrets of the
+universe, think in terms of energy,
+frequency and vibration.
+AZ QUOTES
 
 ```
 #NOTE
