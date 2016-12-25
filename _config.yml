@@ -1,0 +1,8 @@
+title: Ocr space
+description: Free Online OCR for Ruby - Convert images to text
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
