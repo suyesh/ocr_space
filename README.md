@@ -26,9 +26,9 @@ Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 
 ## Usage
 
-#To convert images from url
-
 ![Nicola Tesla](http://bit.ly/2ih9aXt)
+
+#To convert images from url
 
 ```ruby
 require 'ocr_space'
