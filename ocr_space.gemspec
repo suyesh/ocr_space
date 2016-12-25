@@ -35,4 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "json"
   spec.add_dependency "httparty"
   spec.add_dependency "httmultiparty"
+  spec.add_dependency 'colorize'
 end
