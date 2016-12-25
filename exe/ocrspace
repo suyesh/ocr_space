@@ -7,9 +7,8 @@ if ARGV.empty?
 else
   begin
     result = OcrSpace::FromFile.new(files: ARGV[0])
+    puts result.text_data
   rescue
      puts "Something went wrong, Please try again."
   end
 end
-
-puts result.text_data
