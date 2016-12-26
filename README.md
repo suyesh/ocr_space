@@ -36,7 +36,7 @@ require 'ocr_space'
 result = OcrSpace::FromUrl.new(apikey: "YOUR API KEY", url: "http://bit.ly/2ih9aXt")
 
 p result
-=>  #<OcrSpace::FromUrl:0x007ff5ce404748 @data=#<HTTParty::Response:0x7ff5ce3efcf8 parsed_response={"ParsedResults"=>[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}], "OCRExitCode"=>1, "IsErroredOnProcessing"=>false, "ErrorMessage"=>nil, "ErrorDetails"=>nil, "ProcessingTimeInMilliseconds"=>"345"}, @response=#<Net::HTTPOK 200 OK readbody=true>, @headers={"cache-control"=>["no-cache"], "pragma"=>["no-cache"], "content-length"=>["454"], "content-type"=>["application/json; charset=utf-8"], "expires"=>["-1"], "server"=>["Microsoft-IIS/10.0"], "x-aspnet-version"=>["4.0.30319"], "x-powered-by"=>["ASP.NET"], "date"=>["Sun, 25 Dec 2016 22:18:22 GMT"], "connection"=>["close"]}>>
+=>  #{"ParsedResults"=>[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}], "OCRExitCode"=>1, "IsErroredOnProcessing"=>false, "ErrorMessage"=>nil, "ErrorDetails"=>nil, "ProcessingTimeInMilliseconds"=>"316"}
 
 p result.text_data #Clean result
 
@@ -52,7 +52,7 @@ result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "./nicola_tesla.j
 
 p result #Raw result
 
-=>  #<OcrSpace::FromFile:0x007ff5ce3ae668 @file=#<File:./nicola_tesla.jpg>, @data=#<HTTParty::Response:0x7ff5ce2c41f8 parsed_response={"ParsedResults"=>[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}], "OCRExitCode"=>1, "IsErroredOnProcessing"=>false, "ErrorMessage"=>nil, "ErrorDetails"=>nil, "ProcessingTimeInMilliseconds"=>"311"}, @response=#<Net::HTTPOK 200 OK readbody=true>, @headers={"cache-control"=>["no-cache"], "pragma"=>["no-cache"], "content-length"=>["454"], "content-type"=>["application/json; charset=utf-8"], "expires"=>["-1"], "server"=>["Microsoft-IIS/10.0"], "x-aspnet-version"=>["4.0.30319"], "x-powered-by"=>["ASP.NET"], "date"=>["Sun, 25 Dec 2016 22:21:10 GMT"], "connection"=>["close"]}>>
+=>  #{"ParsedResults"=>[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}], "OCRExitCode"=>1, "IsErroredOnProcessing"=>false, "ErrorMessage"=>nil, "ErrorDetails"=>nil, "ProcessingTimeInMilliseconds"=>"316"}
 
 p result.text_data #Clean result
 

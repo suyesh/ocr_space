@@ -9,6 +9,7 @@ module OcrSpace
                                           language: language,
                                           isOverlayRequired: isOverlayRequired,
                                           url: url })
+            @data = @data.parsed_response['ParsedResults']
         end
 
         def text_data

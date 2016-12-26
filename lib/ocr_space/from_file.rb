@@ -11,6 +11,7 @@ module OcrSpace
                                                     language: language,
                                                     isOverlayRequired: isOverlayRequired,
                                                     files: @file })
+            @data = @data.parsed_response['ParsedResults']
         end
 
         def text_data
