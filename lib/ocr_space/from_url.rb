@@ -13,7 +13,7 @@ module OcrSpace
         end
 
         def text_data
-            data.parsed_response['ParsedResults'][0]['ParsedText']
+            data[0]['ParsedText']
         end
     end
 end
