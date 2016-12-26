@@ -35,12 +35,13 @@ require 'ocr_space'
 
 result = OcrSpace::FromUrl.new(apikey: "YOUR API KEY", url: "http://bit.ly/2ih9aXt")
 
-p result
-=>  #{"ParsedResults"=>[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}], "OCRExitCode"=>1, "IsErroredOnProcessing"=>false, "ErrorMessage"=>nil, "ErrorDetails"=>nil, "ProcessingTimeInMilliseconds"=>"316"}
+puts result.data
+=>  #[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}]
 
-p result.text_data #Clean result
+puts result.text_data #Clean result
 
-=> "If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n"
+=> "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES"
+
 ```
 
 #To convert images from file upload
@@ -56,7 +57,7 @@ puts result.data #Raw result
 
 puts result.text_data #Clean result
 
-=> "If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n"
+=> "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES"
 
 ```
 
