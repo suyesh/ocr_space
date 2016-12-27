@@ -15,7 +15,7 @@ module OcrSpace
         end
 
         def text_data
-            data[0]['ParsedText'].delete("\n").delete("\r").strip
+            data[0]['ParsedText'].gsub(/(\\r|\\n)/, "")
         end
     end
 end
