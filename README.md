@@ -49,7 +49,7 @@ puts result.text_data #Clean result
 ```ruby
 require 'ocr_space'
 
-result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "./nicola_tesla.jpg")
+result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "/Users/suyesh/Desktop/nicola_tesla.jpg")
 
 puts result.data #Raw result
 
@@ -66,7 +66,7 @@ puts result.text_data #Clean result
 You can run ocr_space through shell to get quick result from a image using filepath
 
 ```
-$ ocrspace home/suyesh/nicola_tesla.jpg
+$ ocrspace /Users/suyesh/Desktop/nicola_tesla.jpg
 
 => If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES
 
