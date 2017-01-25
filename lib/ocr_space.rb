@@ -10,10 +10,11 @@ module OcrSpace
 
     def initialize(apikey: ENV['ocr_api_key'])
       @api_key = apikey
+      @data = nil
     end
 
     def text_data
-        data[0]['ParsedText'].delete("\n").delete("\r").strip
+        @data[0]['ParsedText'].delete("\n").delete("\r").strip
     end
   end
 end
