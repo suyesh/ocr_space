@@ -1,3 +1,3 @@
 module OcrSpace
-    VERSION = '0.2.8.4'.freeze
+    VERSION = '1.0'.freeze
 end

@@ -1,7 +1,7 @@
 require 'httparty'
 
 module OcrSpace
-    class FromUrl
+    class Url
         attr_reader :data
         def initialize(apikey: ENV['ocr_api_key'], language: 'eng', isOverlayRequired: false, url: nil, ocr_space: 'https://api.ocr.space/parse/image')
             @data = HTTParty.post(ocr_space,

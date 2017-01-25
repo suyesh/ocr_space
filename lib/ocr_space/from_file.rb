@@ -1,15 +1,15 @@
 require 'ocr_space/file_post'
 
 module OcrSpace
-    class FromFile
+    class File
         attr_reader :data
-        def initialize(apikey: ENV['ocr_api_key'], language: 'eng', isOverlayRequired: false, files: nil)
-            @file = File.new(files)
+        def initialize(apikey: ENV['ocr_api_key'], language: 'eng', isOverlayRequired: false, file: nil)
+            @files = File.new(file)
             @data = OcrSpace::FilePost.post('/parse/image',
                                             body: { apikey: apikey,
                                                     language: language,
                                                     isOverlayRequired: isOverlayRequired,
-                                                    files: @file })
+                                                    file: @files })
             @data = @data.parsed_response['ParsedResults']
         end
 
