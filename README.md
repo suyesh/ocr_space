@@ -24,6 +24,13 @@ Or install it yourself as:
 
 Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 
+#ENV Variables (Optional)
+setting env variables with api key is optional but for commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey. For more details on Command line interface, scroll to the bottom of this page.
+
+```
+$ export ocr_api_key='YOUR API KEY'
+```
+
 ## Usage
 
 ![Nicola Tesla](http://bit.ly/2ih9aXt)
@@ -35,12 +42,6 @@ require 'ocr_space'
 
 resource = OcrSpace::Resource.new(apikey: "YOUR API KEY")
 #By default it picks up ocr_api_key='YOUR API KEY' from your env variables
-```
-#ENV Variables (Optional)
-setting env variables with api key is optional but for commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey. For more details on Command line interface, scroll to the bottom of this page.
-
-```
-$ export ocr_api_key='YOUR API KEY'
 ```
 
 #To convert images from url
