@@ -12,9 +12,5 @@ module OcrSpace
       @api_key = apikey
       @data = nil
     end
-
-    def text_data
-        @data[0]['ParsedText'].delete("\n").delete("\r").strip
-    end
   end
 end

@@ -9,7 +9,7 @@ else
   begin
     resource = OcrSpace::Resource.new
     result = resource.convert file: ARGV[0]
-    puts result.text_data.colorize(:orange)
+    puts result[0]['ParsedText'].delete("\n").delete("\r").strip
   rescue
      puts "Something went wrong, Please try again.".colorize(:red)
   end
