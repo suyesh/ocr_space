@@ -1,13 +1,14 @@
 # !/usr/bin/env ruby
 require 'colorize'
 
-require_relative "../lib/ocr_space/from_file"
+require_relative "../lib/ocr_space/convert"
 
 if ARGV.empty?
   puts "You need to mention the image path".colorize(:red)
 else
   begin
-    result = OcrSpace::FromFile.new(files: ARGV[0])
+    resource = OcrSpace::Resource.new
+    result = resource.convert file: ARGV[0]
     puts result.text_data.colorize(:orange)
   rescue
      puts "Something went wrong, Please try again.".colorize(:red)

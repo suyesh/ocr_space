@@ -28,12 +28,26 @@ Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 
 ![Nicola Tesla](http://bit.ly/2ih9aXt)
 
-#To convert images from url
+## Instantiate OcrSpace resource with apikey
 
 ```ruby
 require 'ocr_space'
 
-result = OcrSpace::Url.new(apikey: "YOUR API KEY", url: "http://bit.ly/2ih9aXt")
+resource = OcrSpace::Resource.new(apikey: "YOUR API KEY")
+#By default it picks up ocr_api_key='YOUR API KEY' from your env variables
+```
+#ENV Variables (Optional)
+setting env variables with api key is optional but for commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey. For more details on Command line interface, scroll to the bottom of this page.
+
+```
+$ export ocr_api_key='YOUR API KEY'
+```
+
+#To convert images from url
+
+```ruby
+
+result = resource.convert url: "http://bit.ly/2ih9aXt"
 
 puts result.data
 =>  #[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}]
@@ -47,9 +61,8 @@ puts result.text_data #Clean result
 #To convert images from file upload
 
 ```ruby
-require 'ocr_space'
 
-result = OcrSpace::File.new(apikey: "YOUR API KEY", file: "/Users/suyesh/Desktop/nicola_tesla.jpg")
+result = resource.convert file: "/Users/suyesh/Desktop/nicola_tesla.jpg"
 
 puts result.data #Raw result
 
@@ -63,26 +76,12 @@ puts result.text_data #Clean result
 
 #COMMAND LINE INTERFACE ***BONUS***
 
-You can run ocr_space through shell to get quick result from a image using filepath
+You can run ocr_space through shell to get quick result from a image using filepath or url
 
 ```
 $ ocrspace /Users/suyesh/Desktop/nicola_tesla.jpg
 
 => If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES
-
-```
-#NOTE
-For commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey.
-
-```
-$ export ocr_api_key='YOUR API KEY'
-```
-Also if you set env variable then you don't need to include apikey in your ruby scripts. You can just do the following -
-
-```ruby
-result = OcrSpace::File.new(file: "./nicola_tesla.jpg") #for File based
-
-result = OcrSpace::Url.new(url: "http://bit.ly/2ih9aXt") #for URL based
 
 ```
 
