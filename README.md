@@ -53,10 +53,6 @@ result = resource.convert url: "http://bit.ly/2ih9aXt"
 puts result
 =>  #[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}]
 
-puts result.text_data #Clean result
-
-=> "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES"
-
 ```
 
 #To convert images from file upload
@@ -68,10 +64,6 @@ result = resource.convert file: "/Users/suyesh/Desktop/nicola_tesla.jpg"
 puts result #Raw result
 
 =>  #{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}
-
-puts result.text_data #Clean result
-
-=> "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES"
 
 ```
 
