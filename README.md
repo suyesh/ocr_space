@@ -33,7 +33,7 @@ Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 ```ruby
 require 'ocr_space'
 
-result = OcrSpace::FromUrl.new(apikey: "YOUR API KEY", url: "http://bit.ly/2ih9aXt")
+result = OcrSpace::Url.new(apikey: "YOUR API KEY", url: "http://bit.ly/2ih9aXt")
 
 puts result.data
 =>  #[{"TextOverlay"=>{"Lines"=>[], "HasOverlay"=>false, "Message"=>"Text overlay is not provided as it is not requested"}, "FileParseExitCode"=>1, "ParsedText"=>"If you want to find the secrets of the \r\nuniverse, think in terms of energy, \r\nfrequency and vibration. \r\nAZ QUOTES \r\n", "ErrorMessage"=>"", "ErrorDetails"=>""}]
@@ -49,7 +49,7 @@ puts result.text_data #Clean result
 ```ruby
 require 'ocr_space'
 
-result = OcrSpace::FromFile.new(apikey: "YOUR API KEY", files: "/Users/suyesh/Desktop/nicola_tesla.jpg")
+result = OcrSpace::File.new(apikey: "YOUR API KEY", file: "/Users/suyesh/Desktop/nicola_tesla.jpg")
 
 puts result.data #Raw result
 
@@ -80,9 +80,9 @@ $ export ocr_api_key='YOUR API KEY'
 Also if you set env variable then you don't need to include apikey in your ruby scripts. You can just do the following -
 
 ```ruby
-result = OcrSpace::FromFile.new(files: "./nicola_tesla.jpg") #for File based
+result = OcrSpace::File.new(file: "./nicola_tesla.jpg") #for File based
 
-result = OcrSpace::FromUrl.new(url: "http://bit.ly/2ih9aXt") #for URL based
+result = OcrSpace::Url.new(url: "http://bit.ly/2ih9aXt") #for URL based
 
 ```
 
