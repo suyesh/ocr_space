@@ -17,7 +17,7 @@ module OcrSpace
                                           language: language,
                                           isOverlayRequired: isOverlayRequired,
                                           url: url })
-            @data = @data.parsed_response['ParsedResults']
+            @data = @data.parsed_response['ParsedResults'][0]
           else
             "You need to Pass either file or url."
           end
@@ -38,7 +38,7 @@ module OcrSpace
                                           language: language,
                                           isOverlayRequired: isOverlayRequired,
                                           url: url })
-            @data = @data.parsed_response['ParsedResults']["ParsedText"].gsub(/\r|\n/, "")
+            @data = @data.parsed_response['ParsedResults'][0]["ParsedText"].gsub(/\r|\n/, "")
           else
             "You need to Pass either file or url."
           end

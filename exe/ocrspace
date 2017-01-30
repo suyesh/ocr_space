@@ -9,8 +9,8 @@ if ARGV.empty?
 else
    begin
     resource = OcrSpace::Resource.new
-    result = resource.convert file: ARGV[0]
-    puts result["ParsedText"].gsub(/\r|\n/, "")
+    result = resource.clean_convert file: ARGV[0]
+    puts result
    rescue
      puts "Something went wrong. Please try again.".colorize(:red)
   end
