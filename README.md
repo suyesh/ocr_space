@@ -1,5 +1,5 @@
 ![OCR.SPACE](https://ocr.space/Content/Images/ocr.space.logo.png)
-[![Gem Version](https://badge.fury.io/rb/ocr_space.svg)](https://badge.fury.io/rb/ocr_space)
+[![Gem Version](https://badge.fury.io/rb/ocr_space@2x.png)](https://badge.fury.io/rb/ocr_space)
 
 # OcrSpace
 
