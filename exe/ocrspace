@@ -1,7 +1,8 @@
 # !/usr/bin/env ruby
 require 'colorize'
-
+require_relative "../lib/ocr_space"
 require_relative "../lib/ocr_space/convert"
+
 
 if ARGV.empty?
   puts "You need to mention the image path".colorize(:red)
