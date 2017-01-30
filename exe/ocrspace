@@ -9,5 +9,4 @@ else
     resource = OcrSpace::Resource.new
     result = resource.convert file: ARGV[0]
     puts result
-  end
 end
