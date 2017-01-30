@@ -7,7 +7,11 @@ require_relative "../lib/ocr_space/convert"
 if ARGV.empty?
   puts "You need to mention the image path".colorize(:red)
 else
+   begin
     resource = OcrSpace::Resource.new
     result = resource.convert file: ARGV[0]
-    puts result
+    puts result["ParsedText"].gsub(/\r|\n/, "")
+   rescue
+     puts "Something went wrong. Please try again.".colorize(:red)
+  end
 end
