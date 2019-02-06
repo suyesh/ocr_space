@@ -3,7 +3,7 @@
 
 # OcrSpace
 
-Simple API wrapper for [OCR.Space](https://ocr.space), A awesome Free api for converting images to text. Register [here](http://space.us11.list-manage1.com/subscribe?u=ce17e59f5b68a2fd3542801fd&id=252aee70a1) for free api key.
+Simple API wrapper for [OCR.Space](https://ocr.space), An awesome free API for converting images to text. Register [here](http://space.us11.list-manage1.com/subscribe?u=ce17e59f5b68a2fd3542801fd&id=252aee70a1) for free api key.
 
 
 ## Installation
@@ -24,8 +24,8 @@ Or install it yourself as:
 
 Hosted at [rubygems.org](https://rubygems.org/gems/ocr_space)
 
-#ENV Variables (Optional)
-setting env variables with api key is optional but for commandline interface to work you will have to set ENV variable 'ocr_api_key' to your apikey. For more details on Command line interface, scroll to the bottom of this page.
+### ENV Variables (Optional)
+Setting env variables with API key is optional but for command line interface to work you will have to set ENV variable 'ocr_api_key' to your API key. For more details on the command line interface, scroll to the bottom of this page.
 
 ```
 $ export ocr_api_key='YOUR API KEY'
@@ -33,9 +33,9 @@ $ export ocr_api_key='YOUR API KEY'
 
 ## Usage
 
-![Nicola Tesla](http://bit.ly/2ih9aXt)
+![Nicola Tesla](https://bit.ly/2ih9aXt)
 
-## Instantiate OcrSpace resource with apikey
+## Instantiate OcrSpace resource with API key
 
 ```ruby
 require 'ocr_space'
@@ -44,10 +44,9 @@ resource = OcrSpace::Resource.new(apikey: "YOUR API KEY")
 #By default it picks up ocr_api_key='YOUR API KEY' from your env variables
 ```
 
-#To convert images from url
+## To convert images from URL
 
 ```ruby
-
 result = resource.convert url: "http://bit.ly/2ih9aXt"
 
 puts result
@@ -60,10 +59,9 @@ puts result
 => #If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES
 ```
 
-#To convert images from file upload
+## To convert images from file upload
 
 ```ruby
-
 result = resource.convert file: "/Users/suyesh/Desktop/nicola_tesla.jpg"
 
 puts result #Raw result
@@ -77,28 +75,25 @@ puts result
 => #If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES
 ```
 
-#COMMAND LINE INTERFACE ***BONUS***
+## Command line interface ***BONUS***
 
-You can run ocr_space through shell to get quick result from a image using filepath or url
+You can run ocr_space through shell to get quick result from a image using file path or URL.
 
 ```
-$ ocrspace /Users/suyesh/Desktop/nicola_tesla.jpg
+$ ocr_space /Users/suyesh/Desktop/nicola_tesla.jpg
 
 => If you want to find the secrets of the universe, think in terms of energy, frequency and vibration. AZ QUOTES
-
 ```
 
-#Optional
+## Optional
 
 You can also pass in Optional attributes
 
 ```ruby
-
 isOverlayRequired:
 #[Optional] Default = False Allows you to specify if the image/pdf text overlay is required. Overlay could be #used to show the text over the image
 
 language:
-
 #Czech = ce; Danish = dan; Dutch = dut; English = eng; Finnish = fin; French = fre; German = ger;Hungarian=hun;
 #Italian = ita; Norwegian = nor; Polish = pol; Portuguese = por; Spanish = spa; Swedish = swe; #ChineseSimplified = chs; Greek = gre; Japanese = jpn; Russian = rus; Turkish = tur; ChineseTraditional = cht; #Korean = kor
 ```
